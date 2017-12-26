@@ -7,8 +7,8 @@
     "lint": "eslint ./",
     "build:renderer:dev": "better-npm-run build:renderer:dev",
     "build:renderer:prod": "better-npm-run build:renderer:prod",
-    "build:main:dev": "better-npm-run build:main:dev",
-    "build:main:prod": "better-npm-run build:main:prod",
+    "build:main:dev": "cd app/ && npm install && cd .. && better-npm-run build:main:dev",
+    "build:main:prod": "cd app/ && npm install && cd .. && better-npm-run build:main:prod",
     "start:electron:dev": "cd app/ && npm install --registry=https://registry.npm.taobao.org && cross-env NODE_ENV=development electron --inspect-brk=5858 .",
     "start:electron:prod": "cd app/ && npm install --registry=https://registry.npm.taobao.org && cross-env NODE_ENV=production electron --inspect=5858 .",
     "pack": "cd app/ && npm install --registry=https://registry.npm.taobao.org && cd .. && build --win --ia32 --x64 --mac"
