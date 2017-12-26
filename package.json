@@ -26,8 +26,8 @@
     }
   },
   "build": {
-    "appId": "electron-demo",
-    "productName": "Electron_Demo",
+    "appId": "Electron_Scaffold",
+    "productName": "Electron_Scaffold",
     "artifactName": "${productName}-${version}-${arch}.${ext}",
     "asar": true,
     "publish": [
