@@ -7,8 +7,10 @@
     "lint": "eslint ./",
     "build:renderer:dev": "better-npm-run build:renderer:dev",
     "build:renderer:prod": "better-npm-run build:renderer:prod",
-    "start:electron:dev": "cd app/ && npm install --registry=https://registry.npm.taobao.org && cross-env NODE_ENV=development electron --inspect=5858 .",
-    "start:electron:prod": "cd app/ && npm install --registry=https://registry.npm.taobao.org && cross-env NODE_ENV=production electron .",
+    "build:main:dev": "better-npm-run build:main:dev",
+    "build:main:prod": "better-npm-run build:main:prod",
+    "start:electron:dev": "cd app/ && npm install --registry=https://registry.npm.taobao.org && cross-env NODE_ENV=development electron --inspect-brk=5858 .",
+    "start:electron:prod": "cd app/ && npm install --registry=https://registry.npm.taobao.org && cross-env NODE_ENV=production electron --inspect=5858 .",
     "pack": "cd app/ && npm install --registry=https://registry.npm.taobao.org && cd .. && build --win --ia32 --x64 --mac"
   },
   "betterScripts": {
@@ -22,6 +24,18 @@
       "command": "webpack --config webpack.config.renderer.prod.js --progress --colors --display-error-details",
       "env": {
         "NODE_ENV": "production"
+      }
+    },
+    "build:main:prod": {
+      "command": "webpack --config webpack.config.main.js --progress --colors --display-error-details",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "build:main:dev": {
+      "command": "webpack --config webpack.config.main.js --progress --colors --display-error-details",
+      "env": {
+        "NODE_ENV": "development"
       }
     }
   },

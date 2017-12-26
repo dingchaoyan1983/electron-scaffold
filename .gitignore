@@ -4,3 +4,4 @@ app/node_modules/
 app/renderer/
 dist/
 .vscode
+app/main/
