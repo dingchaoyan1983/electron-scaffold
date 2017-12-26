@@ -25,8 +25,7 @@ module.exports = {
     libraryTarget: 'commonjs2',
   },
   node: {
-    __filename: true,
-    __dirname: true,
+    __dirname: false,
   },
   module: {
     rules: [

@@ -33,7 +33,7 @@ const createWindow = () => {
   if (debug) {
     mainWindow.showUrl('http://localhost:1212/renderer');
   } else {
-    mainWindow.showUrl(path.resolve('renderer', 'index.html'));
+    mainWindow.showUrl(path.resolve(__dirname, '..', 'renderer', 'index.html'));
   }
 
   mainWindow.maximize();

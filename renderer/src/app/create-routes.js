@@ -1,12 +1,12 @@
 import React from 'react';
 import { Router } from 'react-router';
-import Layout from './containers/layout.js';
+import Layout from './containers/layout';
 
-const routes = (store, lang) => [
+const routes = () => [
   {
     path: '/',
-    component: (props) => <Layout />,
-  }
+    component: () => <Layout />,
+  },
 ];
 
 export default (history, store) =>
