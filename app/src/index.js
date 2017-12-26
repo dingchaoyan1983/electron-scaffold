@@ -4,6 +4,10 @@ import log from 'electron-log';
 import { autoUpdater } from 'electron-updater';
 import electronWindow from 'electron-window';
 
+log.transports.file.maxSize = 5 * 1024 * 1024;
+
+// Write to this file, must be set before first logging
+log.transports.file.file = `${app.getPath('appData')}/log.txt`;
 autoUpdater.logger = log;
 autoUpdater.logger.transports.file.level = 'info';
 log.info('App starting...');
